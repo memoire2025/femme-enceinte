@@ -1,0 +1,251 @@
+:root { 
+  --background-color: rgb(18, 0, 68); 
+  --default-color: rgb(159, 77, 231); 
+  --heading-color: rgb(41, 100, 209);
+  --accent-color: rgb(14, 74, 163); 
+  --surface-color: #ffffff; 
+  --contrast-color: #ffffff; 
+}
+
+:root {
+  --default-font: "Roboto",  system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", "Satisfy", sans-serif;
+  --nav-font: "Inter", "Poppins", sans-serif;
+}
+
+
+#login-block{
+  box-shadow: 0 0 10px var(--default-color);
+  transition: all ease-in-out .3s;
+  animation: shadow-grow 2s infinite linear;
+}
+
+@keyframes shadow-grow{
+  0%{
+    box-shadow: 0 0 3px var(--default-color);
+  }
+  60%{
+    box-shadow: 2px 2px 15px var(--background-color);
+  }
+  100%{
+    box-shadow: 0 0 3px var(--default-color);
+  }
+}
+
+
+
+
+p{
+  font-family: var(--default-font);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+.header{
+  background-color: var(--background-color);
+  /* background : linear-gradient(90deg, rgb(87, 3, 160) 0%, rgb(87, 3, 160) 27%, rgb(102, 25, 170) 56%, rgb(71, 23, 133) 100%) */
+}
+
+.header .dropdown-toogle{
+  color: white !important;
+}
+
+.navlink{
+  transition: .3s ease-in-out;
+  font-size: 1.03em;
+  color: var(--heading-color);
+  padding: 5px 10px;
+  font-family: var(--default-font);
+}
+.navlink:hover{
+  background-color: rgba(8, 77, 204, 0.945);
+  color: #ffffff;
+  /* transform: scaleX(1.002); */
+  word-spacing: 2px;
+}
+.navlink:active{
+  color: #f1f1f1;
+  font-weight: 800;
+}
+
+.header .accordion .navlink-accordion{
+  color : rgb(87, 3, 160);
+  transition: .3s ease-in-out;
+}
+
+.header .accordion .navlink-accordion:hover{
+  background-color: rgb(87, 3, 160);
+  color: #f1f1f1;
+  font-weight: 400;
+}
+
+#contenu-composant{
+  margin-left: 227px;
+  width: 83%;
+}
+
+#btn-submit{
+  transition: .3s ease-in-out;
+}
+
+#btn-submit:hover{
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width : 990px ) {
+  #contenu-composant{
+    margin-left: 1px;
+    width: 100%;
+  }
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="date"]:hover,
+form select:hover
+{
+  border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
+}
+
+.recherche-block:hover .loop{
+  border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
+}
+
+.recherche-block:active .loop{
+  border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="date"]:focus,
+form select:focus
+{
+  border: 1px solid var(--accent-color);
+  outline: var(--accent-color);
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="number"]::placeholder,
+input[type="search"]::placeholder
+{
+  color: #777777d8;
+  font-family: var(--default-font);
+}
+
+input[type="checkbox"],
+input[type="radio"]
+{
+  appearance: none;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked
+{
+  background-color: var(--accent-color);
+  border-color: #979797;
+}
+
+label{
+  cursor: pointer;
+}
+
+
+button[type="submit"] {
+  border: none;
+  outline: none;
+}
+
+
+#login-block form h3{
+  color: rgba(87, 3, 160, 0.774);
+  text-transform: uppercase;
+  font-family: corbel;
+}
+
+.fade-in-box{
+  opacity: 0;
+  transform: translateY(10%);
+  /* transform: scale(1.2); */
+  animation: fadeIn 1s ease-in forwards;
+}
+@keyframes fadeIn{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(1);
+  }
+}
+
+thead .th{
+  background-color: var(--heading-color);
+  color: #ffffff;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+.tbody td{
+  font-family: var(--nav-font);
+}
+
+
+
+
+
+.App {
+  text-align: center;
+  font-size: 2em;
+  color: pink;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
