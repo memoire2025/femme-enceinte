@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://pregnante.great-site.net",
+    baseURL: "http://pregnante.great-site.net/api",
 });
 
 api.interceptors.request.use(async (config) => {
